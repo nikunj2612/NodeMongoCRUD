@@ -1,0 +1,18 @@
+extends layout
+block content
+    h1= title
+    form#formAddUser(name="adduser",method="post",action="/adduser")
+        .col-md-3
+         span FirstName : 
+        .col-md-3 
+         input#inputFirstName(type="text", placeholder="firstname", name="firstname")
+        br
+        br
+        .col-md-3
+         span LastName : 
+        .col-md-3 
+         input#inputLastName(type="text", placeholder="lastname", name="lastname")
+        br
+        br
+        .col-md-9 
+         button#btnSubmit(type="submit", class="btn btn-info") SUBMIT

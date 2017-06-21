@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: lightgray;
+}
+
+
+span
+{
+	color:black;
+}
+.btn
+{
+	padding:5px;
+	font-size: 11px;
+}

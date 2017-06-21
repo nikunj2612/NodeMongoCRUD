@@ -1,0 +1,19 @@
+extends layout
+block content
+    h1= "Update Details"
+    form#formupadateUser(name="update1",method="post",action="/update1")
+        input(name="_id", type="hidden", value=user._id)
+        .col-md-3
+         span FirstName : 
+        .col-md-3
+         input#inputFirstName(type="text", placeholder="firstname", name="firstname", value=user.firstname)
+        br
+        br
+        .col-md-3
+         span LastName : 
+        .col-md-3
+         input#inputLastName(type="text", placeholder="lastname", name="lastname",value=user.lastname)
+        br
+        br
+        .col-md-9
+         button#btnSubmit(type="submit", class="btn btn-info") SUBMIT

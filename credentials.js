@@ -1,0 +1,1 @@
+module.exports={cookieSecret:'Force ability look father',};

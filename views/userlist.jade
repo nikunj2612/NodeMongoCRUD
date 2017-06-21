@@ -1,0 +1,35 @@
+extends layout
+block content
+	.col-md-2
+		span
+			b Firstname
+	.col-md-2
+		span
+			b LastName
+	.col-md-2
+		form#formnewuser(name="newuser",method="get",action="/newuser")
+				button.insertDetail(type="submit" class="btn btn-warning" name="insertDetail" style="width:100%;") INSERT
+	br
+	hr
+	each user in userlist
+		.col-md-2
+			span= user.firstname 
+		.col-md-2
+			span=user.lastname
+		.col-md-2
+			form#formremoveUser(name="removeuser",method="post",action="/removeuser")
+				input(name="_id", type="hidden", value=user._id.toHexString())
+				button.removeDetail(type="submit" class="btn btn-primary" name="removeDetail") REMOVE
+		.col-md-2
+			form#formupadateuser(name="updateuser",method="get",action="/updateuser")
+				input(name="_id", type="hidden", value=user._id.toHexString())
+				button.updateDetail(type="submit" class="btn btn-success" name="updateDetail") UPDATE
+		.col-md-2
+			span
+		.col-md-2
+			span 
+		br
+		br
+	
+
+		
